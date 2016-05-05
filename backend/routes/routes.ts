@@ -1,11 +1,11 @@
 /// <reference path="../../typings/tsd.d.ts" />
 /// <reference path="../server.ts" />
-/// <reference path="../DataAccess/blogManager.ts" />
+/// <reference path="../DataAccess/heroManager.ts" />
 import express = require("express");
-import blogManager = require("../DataAccess/blogManager");
+import heroManager = require("../DataAccess/heroManager");
 
-//var dataContext = new blogManager();
-var blogManagerInstance = new blogManager();
+//var dataContext = new heroManager();
+var heroManagerInstance = new heroManager();
 
 var router = express.Router();
 //This will print out the request to the console
@@ -13,16 +13,16 @@ router.use((req, res, next) => {
         console.log(req.method, req.url);
         next();
 });
-//This is the primary route for the blog, All calls from client side that use HTTP 
-//methods on the path 'blogRoute' will come through this router.
-router.route("/blogRoute")
+//This is the primary route for the hero, All calls from client side that use HTTP 
+//methods on the path 'heroRoute' will come through this router.
+router.route("/heroRoute")
     .get((req, res) => { 
-          blogManagerInstance.getAllPosts().then((responseFromPromise) => {
+          heroManagerInstance.getHeroes().then((responseFromPromise) => {
               res.json(responseFromPromise);
           })
     })
     .post((req, res) => {
-           blogManagerInstance.addContent(req);   
+           heroManagerInstance.saveHero(req);   
     });
 
 export = router;

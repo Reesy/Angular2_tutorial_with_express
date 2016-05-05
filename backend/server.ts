@@ -1,7 +1,7 @@
 /// <reference path="../typings/tsd.d.ts" />
 /// <reference path="routes/routes.ts" />
-/// <reference path="models/blogModel.ts" />
-/// <reference path="DataAccess/blogManager.ts" />
+/// <reference path="models/heroModel.ts" />
+/// <reference path="DataAccess/heroManager.ts" />
 
 import express = require("express");
 import bodyParser = require('body-parser');
@@ -22,7 +22,7 @@ var server = app.listen(8081, () =>
 {
     var host = server.address()
     var port = server.address().port
-    console.log("Reesy.net at http://localhost:%s", port)
+    console.log("Example Angular 2 at http://localhost:%s", port)
 })
 //Used to send a 404 error
 app.use((req, res) =>
