@@ -8,7 +8,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('angular2/core');
-var mock_heroes_1 = require('../services/mock-heroes');
+var mock_heroes_1 = require('../mock-heroes');
 var HeroService = (function () {
     function HeroService() {
     }

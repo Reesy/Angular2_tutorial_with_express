@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/routes');
 var app = express();
 var router = express.Router();
-app.use(express.static('../Atsb-client-side'));
+app.use(express.static('../frontend'));
 //configure body-parser
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
