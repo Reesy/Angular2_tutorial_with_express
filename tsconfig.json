@@ -10,9 +10,9 @@
     "noImplicitAny": false
   },
   "exclude": [
+    "typings/browser",
+    "typings/browser.d.ts",
     "node_modules",
-    "frontend/node_modules",
-    "typings/main",
-    "typings/main.d.ts"
+    "frontend/node_modules"
   ]
 }
